@@ -8,7 +8,7 @@ class RidesController < ApplicationController
     # byebug
     @ride.attraction_id = params[:attraction]
     @ride.user_id = current_user.id
-    @ride.save
+    # @ride.save
     @ride.take_ride
     redirect_to user_path(current_user)
   end
