@@ -1,3 +1,10 @@
 class CreateRides < ActiveRecord::Migration
-  # Write your migrations here
+  def change
+    create_table :rides do |t|
+      t.references :attraction
+      t.references :user
+
+      t.timestamp
+    end
+  end
 end

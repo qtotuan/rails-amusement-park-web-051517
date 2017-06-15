@@ -1,0 +1,14 @@
+<h1>User Sign In</h1>
+
+<%= form_tag login_path do %>
+
+  <%= label_tag :name %><br><br>
+  <%= text_field_tag "user[name]" %><br><br>
+
+  <%= label_tag :password %><br><br>
+  <%= text_field_tag "user[password]" %><br><br>
+
+  <%= submit_tag "Sign In" %><br><br>
+<% end %>
+
+<%= link_to("Back", root_path) %>
