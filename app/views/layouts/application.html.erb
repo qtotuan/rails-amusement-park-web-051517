@@ -37,6 +37,13 @@
       </div>
     </div>
 
+    <!--  flash messages -->
+    <% flash.each do |name, message| %>
+      <div style="color:red" class="flash-message flash-message-<%= name %>">
+        <%= message %>
+      </div>
+    <% end %>
+
     <!-- content -->
     <div class="container"  role="main">
       <%= yield %>

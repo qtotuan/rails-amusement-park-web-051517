@@ -8,8 +8,14 @@ class RidesController < ApplicationController
     # byebug
     @ride.attraction_id = params[:attraction]
     @ride.user_id = current_user.id
-    # @ride.save
-    @ride.take_ride
+    @ride.save
+    message = @ride.take_ride
+    if message.nil?
+      @attraction = Attraction.find(params[:attraction])
+      flash[:success] = "Thanks for riding the #{@attraction.name}!"
+    else
+      flash[:error] = message
+    end
     redirect_to user_path(current_user)
   end
 
