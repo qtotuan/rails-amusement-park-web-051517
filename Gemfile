@@ -47,7 +47,7 @@ group :test, :development do
   gem "factory_girl_rails"
   gem "simplecov"
   gem "database_cleaner"
-  gem "sqlite3"
+  gem "pg"
   gem "pry"
   gem "rack_session_access"
 end
