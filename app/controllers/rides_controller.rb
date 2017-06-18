@@ -14,7 +14,7 @@ class RidesController < ApplicationController
       @attraction = Attraction.find(params[:attraction])
       flash[:success] = "Thanks for riding the #{@attraction.name}!"
     else
-      flash[:error] = message
+      flash[:danger] = message
     end
     redirect_to user_path(current_user)
   end
