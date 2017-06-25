@@ -1,4 +1,6 @@
 class AttractionsController < ApplicationController
+  before_action :authenticate
+
 
   def index
     @attractions = Attraction.all
